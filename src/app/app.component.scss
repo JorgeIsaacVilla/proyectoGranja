@@ -1,0 +1,77 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+h1{
+  padding-top: 5vh;
+  font-size: 200%;
+}
+.canva3d{
+  height: 98vh;
+  width: 100%;
+  background: #60B8EF;
+
+  justify-content: center;
+  align-items: center;
+}
+.canvaGranja{
+  height:400px;
+  width: 400px;
+  background-color: rgba(42, 165, 155, 0);
+  position: absolute;
+  top: -10vh;
+  left: -1.5vh;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../assets/image/granja2d.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.canvaTransparent{
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.canvaCorral{
+  background: rgba(121, 33, 33, 0.589);
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.botones{
+height: 100px;
+}
+.botonesAction{
+  height: 60px;
+  width: 140px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: white;
+}
+.corral{
+  border-radius: 10PX;
+  width: 30vh;
+  background: rgb(24, 149, 180);
+  margin: auto;
+  margin-top: 5px;
+}
+h2{
+  font-size: 2vh;
+}
+p{
+  font-size: 1.6vh;
+}
+li{
+  font-size: 1.6vh;
+}

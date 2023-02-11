@@ -1,0 +1,54 @@
+<div class="canva3d">
+
+  <div class="canvaGranja">
+
+  </div>
+
+</div>
+<!--en esta seccion ira un canva transparente con el sistema de botones principales, y las listas de los corrales-->
+<div class="canvaTransparent">
+  <h1>GRANJA FREEDOMCENTER</h1>
+  <!--en esta sección se alojaran las granjas-->
+  <div class="canvaCorral">
+
+    <div class="corral">
+      <form (ngSubmit)="onRegister()" #myform="ngForm">
+        <h2>CORRAL N°//#COR// - //NamCor//</h2>
+        <input type="text" name="name" required [(ngModel)]="newAnimal" #textInput="ngModel">
+        <button type="submit" (click)="addAnimal()" [disabled]="myform.invalid" >Agregar nuevo animal a corral
+        </button>
+        <p *ngIf="animals.length >= 1">
+          <strong *ngIf="animals.length > 6">¡Peligro! La cantidad de animales excede el limite permitido.
+          </strong>
+          <strong *ngIf="animals.length >= 1">Te queda espacio para albergar</strong>
+          {{6-animals.length}}
+          <strong *ngIf="animals.length === 5">animal.</strong>
+          <strong *ngIf="animals.length < 5">animales.</strong>
+      </p>
+        <p *ngIf="animals.length === 0">
+          No hay animales en este corral.
+        </p>
+        <ul>
+          <li *ngFor="let animal of animals; index as i">
+            {{i+1}} {{animal}}<button (click)="deleteAnimal(i)">Eliminar</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+
+  </div>
+  <div class="botones">
+    <button class="botonesAction">CREAR NUEVO CORRAL</button>
+    <button class="botonesAction">DEFINIR NUEVA ESPECIE</button>
+    <button class="botonesAction">DESCARGAR BASE DE DATOS (PDF)</button>
+  </div>
+</div>
+<!--esta sera una ventana emergente, funcin: crear corral-->
+<div>
+
+</div>
+<!--esta sera una ventana emergente, funcin: crear nueva especie-->
+<div>
+
+</div>
+
