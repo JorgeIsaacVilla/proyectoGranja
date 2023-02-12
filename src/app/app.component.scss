@@ -3,30 +3,33 @@
   margin: 0px;
 }
 h1{
-  padding-top: 5vh;
+  padding-top: 2vh;
   font-size: 200%;
+  font-family: Segoe UI, Bold;
+  color: #4843C5;
+  margin-bottom: 3vh;
 }
 .canva3d{
-  height: 98vh;
+  height: 100vh;
   width: 100%;
   background: #60B8EF;
-
+  background-image: url(../assets/image/Fondo20.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   justify-content: center;
   align-items: center;
 }
 .canvaGranja{
-  height:400px;
-  width: 400px;
-  background-color: rgba(42, 165, 155, 0);
-  position: absolute;
-  top: -10vh;
-  left: -1.5vh;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  background-image: url(../assets/image/granja2d.png);
+  width: 80vh;
+  height: 65vh;
+
+  background-color: rgba(105, 40, 40, 0);
+  background-image: url(../assets/image/Granja0.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  top: 10vh;
+  position: relative;
+  margin-left:58%;
 }
 .canvaTransparent{
   height: 100vh;
@@ -40,31 +43,80 @@ h1{
   justify-content: center;
   align-items: center;
 }
-.canvaCorral{
-  background: rgba(121, 33, 33, 0.589);
-  width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+#canvaCorral{
+  background: rgba(240, 3, 3, 0);
+  width: 60vh;
+  height: 70%;
+  margin-left: 5vh;
+  overflow: auto;
+}
+#canvaCorral::-webkit-scrollbar{
+  width: 15px;
+  background: rgb(253, 253, 253);
+  border: 3px solid #273891;
+  border-radius: 50px;
+}
+#canvaCorral::-webkit-scrollbar-thumb{
+  background: #273891;
+  border-radius: 50px;
 }
 .botones{
 height: 100px;
+margin-left: 33%;
 }
 .botonesAction{
-  height: 60px;
-  width: 140px;
+  height: 65px;
+  width: 262px;
   margin-left: 5px;
   margin-right: 5px;
-  margin-top: 5px;
-  border-radius: 10px;
-  background: white;
+  margin-top: 5vh;
+  border-radius: 33px;
+  background:#33AFE4;
+  border: 1px solid #33AFE4;
+  font-size: 20px;
+  color: white;
+  font-family: Segoe UI, Bold;
 }
-.corral{
+#corral{
   border-radius: 10PX;
-  width: 30vh;
-  background: rgb(24, 149, 180);
-  margin: auto;
-  margin-top: 5px;
+  width: 310px;
+  height: 50px;
+  margin-top: 30px;
+  opacity: 0.72;
+  padding-left: 3px;
+
+  background:#9EDFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 33px;
+  opacity: 1;
+}
+.botonesForm{
+height: 40px;
+width: 40px;
+border-radius: 30px;
+margin: auto;
+margin-left: 5px;
+margin-right: 5px;
+background: rgba(255, 0, 0, 0);
+border: none;
+}
+.formCorral{
+display: flex;
+height: 60px;
+}
+.tituloCanvaCorral{
+  color: #4843C5;
+  font-family: Segoe UI, Bold;
+  font-size: 4vh;
+}
+.tituloCorral{
+  font-size: 13px;
+  margin-top: 18px;
+  margin-left: 18px;
+  margin-right: 125px;
+  color: #273891;
+  font-family: Segoe UI, Bold;
+
 }
 h2{
   font-size: 2vh;
@@ -74,4 +126,80 @@ p{
 }
 li{
   font-size: 1.6vh;
+}
+.canvaTransparent2{
+background: #273991b9;
+height: 100vh;
+display: flex;
+position: absolute;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+}
+.formNewEspecie{
+width: 586px;
+height: 500px;
+background: #9EDFFF;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 33px;
+opacity: 1;
+margin: auto;
+}
+.headerFormNewEspecie{
+  padding: 5VH;
+}
+.titleFormNewEspecie{
+  color: #4843C5;
+  font-family:Segoe UI, Bold;
+  font-size: 33px;
+  margin-right: 150px;
+}
+.botonCerrarHeaderformNewEspecie{
+  font-size: 30px;
+  margin-left: 480px;
+  background: transparent;
+  border: none;
+}
+.bodyFormNewEspecie{
+  display: flex;
+}
+.imageNewEspecie{
+  width: 139px;
+  height: 163px;
+  background: transparent url('../assets/image/Grupo\ 13.png') 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  margin-left: 5vh;
+}
+.boxFormNewSpecie{
+  margin-left: 3vh;
+}
+.classNewSpecie{
+  color: #4843C5;
+  font-size: 21px;
+}
+.inputNewEspecie{
+width: 350px;
+height: 25px;
+border-radius: 15px rgba(0, 140, 255, 0.76);
+margin-bottom: 15px;
+}
+.boxButtonNewEspecie{
+justify-content: center;
+display: flex;
+margin-top: 20px;
+}
+.buttonNewEspecie{
+  width: 236px;
+  height: 65px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 33px;
+  opacity: 1;
+  border: none;
+  margin: 5px;
+  font-family: Segoe UI, Regular;
+  font-size: 21px;
+  color: aliceblue;
 }
