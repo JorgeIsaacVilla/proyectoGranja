@@ -11,23 +11,28 @@ export class AppComponent {
   title = 'granja_FreeDomcenter';
   btnDisable = true;
   register={
-    /*nameAnimal:'',*/
-    especieAnimal:'',
+    nameAnimal:'',
     ageAnimal:'',
 
   }
-  ocultar=false;
+  ocultarVentanaCrearEspecie=false;
+  ocultarVentanaCorrales=false;
 
-  animals: string [] = [ 'vaca', 'toro','gallo','cerdo','tortuga','perro'];
+
+  animals: string [] = [ 'vaca', 'toro'];
   newAnimal = '';
+  especiesAnimales: string [] = [];
+  newEspecieAnimal = ''
+  agesAnimales: number[] =[];
+  newAgeAnimal = '';
 
+  /*especiesAnimales = [{espesimen: "omnívoro"}, {espesimen:"herbívoro"}, {espesimen:"carnivoro"}];
+  elegido='';*/
 
-  corrales: string[] = ['vaca','vaca','vaca','vaca','vaca','vaca','vaca','vaca','vaca','vaca','vaca'];
+  corrales: string[] = ['vaca','vaca','vaca','vaca','vaca','vaca','vaca'];
   newCorral ='';
 
-
-
-    onRegister(){
+    onRegisterCorral(){
       console.log(this.register);
     }
     addNewCorral(){
@@ -46,11 +51,23 @@ export class AppComponent {
       const element =event.target as HTMLElement;
       console.log(element.scrollTop);
        }
-
-    mostrarFiltrar(){
-       this.ocultar = !this.ocultar;
+       mostrarVentanaDefinirEspecie(){
+       this.ocultarVentanaCrearEspecie = !this.ocultarVentanaCrearEspecie;
        }
+       mostrarVentanaCorrales(){
+        this.ocultarVentanaCorrales = !this.ocultarVentanaCorrales;
+        }
 
+      onRegisterAnimal(){
+          console.log(this.register);
+        }
+      addNewAnimal(){
+          this.animals.push(this.newAnimal);
+          this.newAnimal ='';
+          this.especiesAnimales.push(this.newEspecieAnimal)
+          this.newEspecieAnimal ='';
+
+        }
 }
 
 

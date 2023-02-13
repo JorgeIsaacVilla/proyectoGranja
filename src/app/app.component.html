@@ -9,27 +9,27 @@
   <div id="canvaCorral" (scroll)="onScroll($event)">
     <h2 class="tituloCanvaCorral">Corrales creados</h2>
     <div id="corral" *ngFor="let corral of corrales; index as form">
-      <form (ngSubmit)="onRegister()" #myform="ngForm" class ="formCorral">
+      <form (ngSubmit)="onRegisterCorral()" #myform="ngForm" class ="formCorral">
 
             <h2 class="tituloCorral">CORRAL {{form+1}} </h2>
-            <button class="botonesForm"><img src="../assets/image/Icon awesome-edit.png" alt=""></button>
+            <button class="botonesForm" (click)="mostrarVentanaCorrales()"><img src="../assets/image/Icon awesome-edit.png" alt=""></button>
             <button class="botonesForm" (click)="deletCorral(form)" ><img src="../assets/image/Icon material-delete-forever.png" alt=""></button>
       </form>
     </div>
   </div>
   <div class="botones">
     <button class="botonesAction" (click)="addNewCorral()">Crear corral</button>
-    <button class="botonesAction"(click)="mostrarFiltrar()">Definir especie</button>
+    <button class="botonesAction"(click)="mostrarVentanaDefinirEspecie()">Definir especie</button>
     <button class="botonesAction">Descargar PDF</button>
   </div>
 </div>
 <!--(FIN 1)esta será la VISTA PRINCIPAL, funcin: crear corral-->
 
 <!--(INICIO 2)esta sera una ventana emergente, función: crear nueva especie-->
-<div class="canvaTransparent2" *ngIf="ocultar">
+<div class="canvaTransparent2" *ngIf="ocultarVentanaCrearEspecie">
   <div class="formNewEspecie">
     <div class="headerFormNewEspecie">
-      <button class="botonCerrarHeaderformNewEspecie" href="" (click)="mostrarFiltrar()" ><img src="../assets/image/Grupo 11.png" alt=""></button>
+      <button class="botonCerrarHeaderformNewEspecie" href="" (click)="mostrarVentanaDefinirEspecie()" ><img src="../assets/image/Grupo 11.png" alt=""></button>
       <h2 class="titleFormNewEspecie">Crea tu nueva especie</h2>
     </div>
     <div class="bodyFormNewEspecie">
@@ -40,40 +40,47 @@
       </div>
     </div>
     <div class="boxButtonNewEspecie">
-      <button class="buttonNewEspecie" style="background: #bd5050c0;" (click)="mostrarFiltrar()">Cancelar</button>
+      <button class="buttonNewEspecie" style="background: #bd5050c0;" (click)="mostrarVentanaDefinirEspecie()">Cancelar</button>
       <button class="buttonNewEspecie" style="background:#33AFE4; border: 1px solid #33AFE4">Crear especie</button>
     </div>
   </div>
 </div>
-
 <!--(FIN 2)esta sera una ventana emergente, función: crear nueva especie-->
-
-<!--(INICIO 3)esta sera una ventana emergente, función: crear nueva especie-->
-
-       <!-- <div class="imputData">
-          <H3>Ingresar especie de animal</H3><input type="list" name="especieAnimal" required [(ngModel)]="newAnimal" #textInput="ngModel">
-        </div>
-
-
-        <button type="submit" (click)="addAnimal()" [disabled]="myform.invalid" >Agregar nuevo animal a corral
-        </button>
-        <p *ngIf="animals.length >= 1">
-          <strong *ngIf="animals.length > 6">¡Peligro! La cantidad de animales excede el limite permitido.
-          </strong>
-          <strong *ngIf="animals.length >= 1">Te queda espacio para albergar</strong>
-          {{6-animals.length}}
-          <strong *ngIf="animals.length === 5">animal.</strong>
-          <strong *ngIf="animals.length < 5">animales.</strong>
-      </p>
-        <p *ngIf="animals.length === 0">
-          No hay animales en este corral.
-        </p>
-        <ul>
-          <li *ngFor="let animal of animals; index as i">
-            {{i+1}} Especie: {{animal}} <button (click)="deleteAnimal(i)">Eliminar</button>
-          </li>
-        </ul>
--->
-<div>
-
+<br/>
+<!--(INICIO 3)esta sera una ventana emergente, función: ENTRAR A LOS CORRALES-->
+<div class="corralInterno" *ngIf="ocultarVentanaCorrales">
+  <form action="" #myform="ngForm" >
+  <h2 class="tituloCrearAnimal">Personaliza tu especie</h2>
+  <div class="formCorralInterno">
+    <h3 class="dataNuevoAnimal">Nombre</h3><input placeholder="" type="text" class="inputDataEspecie" name="nameAnimal" required [(ngModel)]="newAnimal" #textInput="ngModel">
+    <h3 class="dataNuevoAnimal">Especie</h3>
+    <select name="" id="" class="inputDataEspecie" required ng-option="especieAnimal of especieAnimal in especiesAnimales" ng-mode="elegido">
+      <option value=""></option>
+      <option value="omnivoro">omnívoro</option>
+      <option value="herbivoro">herbívoro</option>
+      <option value="carnivoro">carnivoro</option>
+    </select>
+    <div class="inferiorFormCorralInterno">
+      <div>
+        <h3 class="dataNuevoAnimal">Edad</h3><input placeholder="" type="number" class="inputAgeEspecie">
+      </div>
+      <button type="submit" class="botonAgregarNuevoAnimal" (click)="addNewAnimal()">Guardar animal</button>
+    </div>
+  </div>
+  <div id="canvaAnimal" (scroll)="onScroll($event)">
+<ul>
+    <li class="boxAnimal" (ngSubmit)="onRegisterAnimal()" *ngFor="let animal of animals; index as i">
+      <div style="height: 5vh;width: 30vh;">
+      <h3 class="nombreAnimal">{{animal}}</h3>
+      <div class="descrpAnimal">
+        <p class="textDescrAnimal" >herbiboro |</p>
+        <p class="textDescrAnimal"> 19 años</p>
+      </div>
+      </div>
+      <button class="EliminarAnimal"(click)="deleteAnimal(i)"><img class="imageDeletAnimal" src="../assets/image/Icon material-delete-forever@2x.png" alt=""></button>
+    </li>
+</ul>
+  </div>
+  <div style="justify-content: center; justify-items: center;display: flex;"><button class="salirDeCorral" (click)="mostrarVentanaCorrales()" >Salir del corral</button></div>
+</form>
 </div>

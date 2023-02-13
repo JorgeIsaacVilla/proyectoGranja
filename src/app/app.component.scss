@@ -157,7 +157,7 @@ margin: auto;
 }
 .botonCerrarHeaderformNewEspecie{
   font-size: 30px;
-  margin-left: 480px;
+  margin-left: 440px;
   background: transparent;
   border: none;
 }
@@ -181,10 +181,11 @@ margin: auto;
   font-size: 21px;
 }
 .inputNewEspecie{
-width: 350px;
+width: 315px;
 height: 25px;
 border-radius: 15px rgba(0, 140, 255, 0.76);
 margin-bottom: 15px;
+margin-top: 10px;
 }
 .boxButtonNewEspecie{
 justify-content: center;
@@ -203,3 +204,138 @@ margin-top: 20px;
   font-size: 21px;
   color: aliceblue;
 }
+.corralInterno{
+background-image: url("../assets/image/Granja\ 0.png");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+height: 100vh;
+width: 100%;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+}
+.tituloCrearAnimal{
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 35px;
+  font-family:Segoe UI, Bold ;
+  color: #F0F0F0;
+}
+.formCorralInterno{
+  width: 41.2vh;
+  height: 25.1vh;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 33px;
+  opacity: 1;
+  background: #9EDFFF;
+  margin: auto;
+  margin-top: 3%;
+  padding: 3vh;
+}
+.dataNuevoAnimal{
+  font-family:Segoe UI, Bold;
+  font-size: 2vh;
+  color: #4843C5;
+  margin-top: 0vh;
+  margin-bottom: 0.5vh;
+}
+.inferiorFormCorralInterno{
+  display: flex;
+}
+.inputDataEspecie{
+  width: 98%;
+  height: 3vh;
+  border-radius: 15px rgba(0, 140, 255, 0.76);
+  margin-bottom: 15px;
+  }
+  .inputAgeEspecie{
+    width: 80%;
+    height: 3vh;
+  }
+  .botonAgregarNuevoAnimal{
+    width: 60%;
+    height: 4vh;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 33px;
+    opacity: 1;
+    border: none;
+    margin: 5px;
+    margin-left: 28px;
+    font-family: Segoe UI, Regular;
+    font-size: 2vh;
+    color: aliceblue;
+    background:#33AFE4;
+    border: 1px solid #33AFE4;
+    margin-top: 2.3vh;
+  }
+  #canvaAnimal{
+    width: 50vh;
+    height: 28vh;
+    margin-left: 5vh;
+    overflow: auto;
+    margin: auto;
+    margin-top: 5vh;
+  }
+ #canvaAnimal::-webkit-scrollbar{
+    width: 15px;
+    background: rgb(253, 253, 253);
+    border: 3px solid #273891;
+    border-radius: 50px;
+  }
+  #canvaAnimal::-webkit-scrollbar-thumb{
+    background: #273891;
+    border-radius: 50px;
+  }
+  .boxAnimal{
+    background: #9EDFFF;
+    width: 43vh;
+    height: 4.5vh;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 45px;
+    opacity: 1;
+    margin-bottom: 3vh;
+    padding: 1.5vh;
+    display: flex;
+  }
+  .nombreAnimal{
+    color: #4843C5;
+    font-family: Segoe UI, Bold;
+    font-size: 2vh;
+    margin-left: 1vh;
+  }
+  .descrpAnimal{
+    display: flex;
+    margin-left: 1vh;
+  }
+  .textDescrAnimal{
+    font-family: Segoe UI, Regular;
+    color: #273891;
+    font-size: 1.6vh;
+  }
+  .EliminarAnimal{
+    height: 3.3vh;
+    width: 3.7vh;
+    background: transparent;
+    border: none;
+    margin-left: 8.5vh;
+    margin-top: 0.7vh;
+  }
+  .imageDeletAnimal{
+    height: 3.1vh;
+    width: 2.5vh;
+  }
+  .salirDeCorral{
+    width: 26vh;
+    height: 6.5vh;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 33px;
+    opacity: 1;
+    background: #33AFE4;
+    color:#F0F0F0;
+    border: none;
+    font-size: 2.7vh;
+    font-family: Segoe UI, Bold;
+    margin-top: 1.5vh;
+  }
