@@ -19,7 +19,7 @@ export class AppComponent {
   ocultarVentanaCorrales=false;
 
 
-  animals: string [] = [ 'vaca', 'toro'];
+  animals: string [] = [ 'Roberto', 'Pamela'];
   newAnimal = '';
   especiesAnimales: string [] = [];
   newEspecieAnimal = ''
