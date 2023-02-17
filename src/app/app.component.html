@@ -41,7 +41,7 @@
     </div>
     <div class="boxButtonNewEspecie">
       <button class="buttonNewEspecie" style="background: #bd5050c0;" (click)="mostrarVentanaDefinirEspecie()">Cancelar</button>
-      <button class="buttonNewEspecie" style="background:#33AFE4; border: 1px solid #33AFE4">Crear especie</button>
+      <button class="buttonNewEspecie" style="background:#33AFE4; border: 1px solid #33AFE4" (click)="mostrarVentanaLetreroNewAnimal()">Crear especie</button>
     </div>
   </div>
 </div>
@@ -56,9 +56,9 @@
     <h3 class="dataNuevoAnimal">Especie</h3>
     <select name="" id="" class="inputDataEspecie" required ng-option="especieAnimal of especieAnimal in especiesAnimales" ng-mode="elegido">
       <option value=""></option>
-      <option value="omnivoro">omnívoro</option>
-      <option value="herbivoro">herbívoro</option>
-      <option value="carnivoro">carnivoro</option>
+      <option value="omnivoro">Toro</option>
+      <option value="herbivoro">Cerdo</option>
+      <option value="carnivoro">Gallina</option>
     </select>
     <div class="inferiorFormCorralInterno">
       <div>
@@ -73,7 +73,7 @@
       <div style="height: 5vh;width: 30vh;">
       <h3 class="nombreAnimal">{{animal}}</h3>
       <div class="descrpAnimal">
-        <p class="textDescrAnimal" >herbiboro |</p>
+        <p class="textDescrAnimal" >Cerdo |</p>
         <p class="textDescrAnimal"> 19 años</p>
       </div>
       </div>
@@ -83,4 +83,14 @@
   </div>
   <div style="justify-content: center; justify-items: center;display: flex;"><button class="salirDeCorral" (click)="mostrarVentanaCorrales()" >Salir del corral</button></div>
 </form>
+</div>
+<!--(FIN 3)esta sera una ventana emergente, función: ENTRAR A LOS CORRALES-->
+
+<!--(INICIO 4)esta sera una ventana emergente, función: Letrero aviso creaste nueva especie-->
+<div class="canvaLetreroNewAnimal" *ngIf="ocultarVentanaNewAnimal">
+    <div class="letreroNewAnimal">
+      <h2 class="tituloLetreroNewAnimal">Tu especie ha sido creada con éxito.</h2>
+      <h3 class="textLetreroNewAnimal">Ya puedes almacenarlo en cada corral que tengas disponible.</h3>
+      <button class="buttonFinNewEspecie" (click)="menuInicio()">Aceptar</button>
+    </div>
 </div>

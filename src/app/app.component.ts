@@ -17,11 +17,12 @@ export class AppComponent {
   }
   ocultarVentanaCrearEspecie=false;
   ocultarVentanaCorrales=false;
+  ocultarVentanaNewAnimal=false;
 
 
   animals: string [] = [ 'Roberto', 'Pamela'];
   newAnimal = '';
-  especiesAnimales: string [] = [];
+  especiesAnimales: string [] = ['caballo', 'cerdo'];
   newEspecieAnimal = ''
   agesAnimales: number[] =[];
   newAgeAnimal = '';
@@ -67,6 +68,13 @@ export class AppComponent {
           this.especiesAnimales.push(this.newEspecieAnimal)
           this.newEspecieAnimal ='';
 
+        }
+        mostrarVentanaLetreroNewAnimal(){
+          this.ocultarVentanaNewAnimal = !this.ocultarVentanaNewAnimal;
+        }
+        menuInicio(){
+          this.ocultarVentanaNewAnimal = !this.ocultarVentanaNewAnimal;
+          this.ocultarVentanaCrearEspecie = !this.ocultarVentanaCrearEspecie;
         }
 }
 

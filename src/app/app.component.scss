@@ -339,3 +339,58 @@ position: absolute;
     font-family: Segoe UI, Bold;
     margin-top: 1.5vh;
   }
+
+  .canvaLetreroNewAnimal{
+    background: #273991b9;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+   right: 0px;
+  }
+  .letreroNewAnimal{
+    width: 586px;
+    height: 500px;
+    background: #9EDFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 33px;
+    opacity: 1;
+    margin: auto;
+    font-family: Segoe UI, Bold;
+
+  }
+  .tituloLetreroNewAnimal{
+    width: 300px;
+    font-size: 35px;
+    color: #4843C5;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    margin-top: 80px;
+  }
+  .textLetreroNewAnimal{
+    font-family: Segoe UI, Regular;
+    font-size: 21px;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    color:#4843C5;
+  }
+.buttonFinNewEspecie{
+  width: 236px;
+  height: 65px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 33px;
+  opacity: 1;
+  font-family: Segoe UI, Regular;
+  font-size: 21px;
+  color: aliceblue;
+  margin-left: 30%;
+  margin-top: 60px;
+  background:#33AFE4;
+  border: 1px solid #33AFE4;
+}
