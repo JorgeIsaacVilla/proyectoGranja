@@ -64,7 +64,7 @@
       <div>
         <h3 class="dataNuevoAnimal">Edad</h3><input placeholder="" type="number" class="inputAgeEspecie">
       </div>
-      <button type="submit" class="botonAgregarNuevoAnimal" (click)="addNewAnimal()">Guardar animal</button>
+      <button type="submit" class="botonAgregarNuevoAnimal" (click)="addNewAnimal()" [disabled]="myform.invalid">Guardar animal</button>
     </div>
   </div>
   <div id="canvaAnimal" (scroll)="onScroll($event)">
@@ -94,3 +94,4 @@
       <button class="buttonFinNewEspecie" (click)="menuInicio()">Aceptar</button>
     </div>
 </div>
+<!--(FIN 4)esta sera una ventana emergente, función: Letrero aviso creaste nueva especie-->
